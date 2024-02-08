@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            background-color: rgb(142, 149, 162);
+          
+            
+        }
+        #big{
+            width: 100%;
+            height: 30vh;
+            
+            
+        }
+        #big1{
+            width: 100%;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            
+            
+        }
+        #questions{
+            width: 60%;
+            height: 70px;
+            border-radius: 20px;
+            background-color: blue;
+            display: flex;
+            color: white;
+            align-items: center;
+            justify-content: space-around;
+        }
+        #answers{
+            width: 70%;
+            height: 35%;
+            border-radius: 10px;
+            margin-top: -20px;
+            /* background-color: rgb(255, 0, 0); */
+        }
+        #answer{
+            width: 100%;
+            height: 50%;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            /* background-color: rgb(128, 0, 255); */
+        }
+        #ans{
+            width: 48%;
+            height: 50px;
+            border-radius: 10px;
+            background-color: rgb(0, 123, 255);
+            color: white;
+            padding-left: 10px;
+        }
+        #ans1{
+            width: 48%;
+            height: 50px;
+            border-radius: 10px;
+            background-color: rgb(0, 123, 255);
+            color: white;
+            padding-left: 10px;
+        }
+        #ans2{
+            width: 48%;
+            height: 50px;
+            border-radius: 10px;
+            background-color: rgb(0, 123, 255);
+            color: white;
+            padding-left: 10px;
+        }
+        #ans3{
+            width: 48%;
+            height: 50px;
+            border-radius: 10px;
+            background-color: rgb(0, 123, 255);
+            color: white;
+            padding-left: 10px;
+
+        }
+       
+        #cbutton{
+            
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+        button{
+            width: 120px;
+            height: 30px;
+            border-radius: 10px;
+            border: none;
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="big">
+        
+    </div>
+    <div id="big1">
+        <div id="questions">
+            <h2 id="ques"></h2>
+        </div>
+        <div id="answers">
+            <div id="answer">
+                <div id="ans">
+                    <h3 id="anse1"></h3>
+                </div>
+                <div id="ans2">
+                    <h3 id="anse2"></h3>
+                </div>
+            </div>
+            <div id="answer">
+                <div id="ans2">
+                    <h3 id="anse3"></h3>
+                </div>
+                <div id="ans3">
+                    <h3 id="anse4"></h3>
+                </div>
+            </div>
+            <div id="cbutton">
+                <button onclick="Previous()">Previous</button>
+                <!-- <button></button> -->
+                <button onclick="next()">Next</button>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let ques=document.getElementById('ques')
+    let anse1=document.getElementById('anse1')
+    let anse2=document.getElementById('anse2')
+    let anse3=document.getElementById('anse3')
+    let anse4=document.getElementById('anse4')
+    
+    let arr=[
+        
+        question1={
+            question:'1. Which is your favorite Tech course?',
+            answer1:'a. Graphics ',
+            answer2:'b. Cybersecurity ',
+            answer3:'c. Software ',
+            answer4:'d. UI/UX  ',
+
+
+            
+
+        },
+
+        question2={
+            question:'2. Are you interested in taking any tech course?',
+            answer1:'a. Yes ',
+            answer2:'b. No ',
+            answer3:'c. Still consedering ',
+            answer4:'d. Not sure  ',
+
+
+            
+
+        },
+
+        question3={
+            question:'3. What is level of computer literacy? ',
+            answer1:'a. Starter ',
+            answer2:'b.Novice',
+            answer3:'c. Expert ',
+            answer4:'d. Professional  ',
+
+
+            
+
+        },
+        question4={
+            question:'4. Why would you ever take a tech course? ',
+            answer1:'a. Curiosity ',
+            answer2:'b. Passion ',
+            answer3:'c. Career ',
+            answer4:'d. All of the above  ',
+
+
+            
+
+        },
+
+        question5={
+            question:'5. How equipped are you? ',
+            answer1:'a.I have no tools ',
+            answer2:'b. Average ',
+            answer3:'c. Beyond Average ',
+            answer4:'d. Below Average ',
+
+
+            
+
+        }
+
+
+
+        
+    ]
+    ques.textContent= arr[0].question
+    anse1.textContent= arr[0].answer1
+    anse2.textContent= arr[0].answer2
+    anse3.textContent= arr[0].answer3
+    anse4.textContent= arr[0].answer4
+    let c=0
+    
+   
+      
+
+    function next(){
+        c++
+    ques.textContent= arr[c].question
+    anse1.textContent= arr[c].answer1
+    anse2.textContent= arr[c].answer2
+    anse3.textContent= arr[c].answer3
+    anse4.textContent= arr[c].answer4
+
+
+    }
+
+    function Previous(){
+        if (c >= 1) {
+         
+            c--
+            ques.textContent= arr[c].question
+            anse1.textContent= arr[c].answer1
+            anse2.textContent= arr[c].answer2
+            anse3.textContent= arr[c].answer3
+            anse4.textContent= arr[c].answer4
+} 
+    
+    }
+    
+</script>
